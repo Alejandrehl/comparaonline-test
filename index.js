@@ -1,4 +1,5 @@
-const { Product, CarInsurance } = require("./src/coTest");
+const Product = require("./src/classes/Product");
+const CarInsurance = require("./src/classes/CarInsurance");
 
 const productsAtDayZero = [
   new Product("Medium Coverage", 10, 20),
