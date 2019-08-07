@@ -3,18 +3,19 @@ class CarInsurance {
     this.products = products;
   }
 
-  updateValues() {
+  updateValues(i) {
     this.products.forEach(product => {
-      product.updateValues();
+      if (i > 0) product.updateValues();
       console.log(`${product.name}, ${product.sellIn}, ${product.price}`);
     });
   }
 
   printResult() {
-    for (let i = 1; i <= 30; i += 1) {
+    console.log("OMGHAI!");
+    for (let i = 0; i <= 30; i += 1) {
       console.log(`-------- day ${i} --------`);
       console.log("name, sellIn, price");
-      this.updateValues();
+      this.updateValues(i);
       console.log("");
     }
   }
