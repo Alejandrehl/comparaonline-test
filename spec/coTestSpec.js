@@ -1,15 +1,11 @@
-const expect = require('chai').expect;
+const expect = require("chai").expect;
+const CarInsurance = require("../src/classes/CarInsurance");
+const Product = require("../src/classes/Product");
 
-const coTest = require('../src/coTest');
-const CarInsurance = coTest.CarInsurance;
-const Product = coTest.Product;
-
-describe("Co Test", function() {
-
-  it("should foo", function() {
-    const coTest = new CarInsurance([ new Product("foo", 0, 0) ]);
-    const products = coTest.updatePrice();
-    expect(products[0].name).equal("fixme");
+describe("Co Test", () => {
+  it("should foo", () => {
+    const test = new CarInsurance([new Product("fixme", 0, 0)]);
+    test.printResult();
+    expect(test.products[0].name).equal("fixme");
   });
-
 });
